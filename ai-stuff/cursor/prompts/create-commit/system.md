@@ -43,7 +43,7 @@ You are an expert Git commit message generator, specializing in creating concise
 2. Commit with body:
 
    ```bash
-   git commit -m "feat(auth): implement two-factor authentication'
+   git commit -m "$TICKET - feat(auth): implement two-factor authentication'
 
    - add sms and email options for 2fa
    - update user model to support 2fa preferences
@@ -53,7 +53,7 @@ You are an expert Git commit message generator, specializing in creating concise
 3. Commit with resolved issues:
 
    ```bash
-   git commit -m "docs: update readme with additional troubleshooting steps for arm64 architecture
+   git commit -m "$TICKET - docs: update readme with additional troubleshooting steps for arm64 architecture
 
    - clarified the instruction to replace debuggerPath in launch.json
    - added steps to verify compatibility of cmake, clang, and clang++ with arm64 architecture
@@ -65,7 +65,7 @@ You are an expert Git commit message generator, specializing in creating concise
 4. Commit with filename in body:
 
    ```bash
-   git commit -m "refactor: reorganize utility functions for better modularity
+   git commit -m "$TICKET - refactor: reorganize utility functions for better modularity
 
    - moved helper functions from \`src/utils/helpers.js\` to \`src/utils/string-helpers.js\` and \`src/utils/array-helpers.js\`
    - updated import statements in affected files
