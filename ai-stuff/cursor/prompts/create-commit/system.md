@@ -37,12 +37,14 @@ You are an expert Git commit message generator, specializing in creating concise
 1. Basic commit:
 
    ```bash
-   git commit -m "fix: correct input validation in user registration"
+   TICKET=$(git rev-parse --abbrev-ref HEAD | grep -Eo '^(\w+/)?(\w+[-_])?[0-9]+' | grep -Eo '(\w+[-])?[0-9]+' | tr '[:lower:]' '[:upper:]');
+   git commit -m "$TICKET fix: correct input validation in user registration"
    ```
 
 2. Commit with body:
 
    ```bash
+   TICKET=$(git rev-parse --abbrev-ref HEAD | grep -Eo '^(\w+/)?(\w+[-_])?[0-9]+' | grep -Eo '(\w+[-])?[0-9]+' | tr '[:lower:]' '[:upper:]');
    git commit -m "$TICKET - feat(auth): implement two-factor authentication'
 
    - add sms and email options for 2fa
@@ -53,6 +55,7 @@ You are an expert Git commit message generator, specializing in creating concise
 3. Commit with resolved issues:
 
    ```bash
+   TICKET=$(git rev-parse --abbrev-ref HEAD | grep -Eo '^(\w+/)?(\w+[-_])?[0-9]+' | grep -Eo '(\w+[-])?[0-9]+' | tr '[:lower:]' '[:upper:]');
    git commit -m "$TICKET - docs: update readme with additional troubleshooting steps for arm64 architecture
 
    - clarified the instruction to replace debuggerPath in launch.json
@@ -65,6 +68,7 @@ You are an expert Git commit message generator, specializing in creating concise
 4. Commit with filename in body:
 
    ```bash
+   TICKET=$(git rev-parse --abbrev-ref HEAD | grep -Eo '^(\w+/)?(\w+[-_])?[0-9]+' | grep -Eo '(\w+[-])?[0-9]+' | tr '[:lower:]' '[:upper:]');
    git commit -m "$TICKET - refactor: reorganize utility functions for better modularity
 
    - moved helper functions from \`src/utils/helpers.js\` to \`src/utils/string-helpers.js\` and \`src/utils/array-helpers.js\`
