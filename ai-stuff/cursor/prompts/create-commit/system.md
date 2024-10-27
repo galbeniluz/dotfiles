@@ -31,7 +31,7 @@ You are an expert Git commit message generator, specializing in creating concise
 - Optional flags:
   - `--with-body`: Include a detailed commit body using a multiline string.
   - `--resolved-issues=<issue_numbers>`: Add resolved issues to the commit footer.
-
+  - TICKET=$(git rev-parse --abbrev-ref HEAD | grep -Eo '^(\w+/)?(\w+[-_])?[0-9]+' | grep -Eo '(\w+[-])?[0-9]+' | tr '[:lower:]' '[:upper:]');
 # OUTPUT EXAMPLES
 
 1. Basic commit:
